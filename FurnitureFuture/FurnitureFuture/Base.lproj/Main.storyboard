@@ -1,24 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="FurnitureFuture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SmallLogo" translatesAutoresizingMaskIntoConstraints="NO" id="R5l-yL-18R">
+                                <rect key="frame" x="128.5" y="50" width="117" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="VcU-7e-DmR"/>
+                                    <constraint firstAttribute="width" constant="117" id="Z8a-ZF-9ht"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tX1-0m-xzG">
+                                <rect key="frame" x="30" y="441" width="316" height="136"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="9Gp-mG-c6p">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="136"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6q1-W9-w8A">
+                                                <rect key="frame" x="0.0" y="0.0" width="153" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="153" id="Xv2-8r-xJN"/>
+                                                    <constraint firstAttribute="height" constant="120" id="cWX-EB-bX6"/>
+                                                </constraints>
+                                                <state key="normal" image="ButtonLogIn"/>
+                                                <connections>
+                                                    <segue destination="yLo-cY-sd3" kind="show" id="uxo-zy-Nea"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOG IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQf-0v-grZ">
+                                                <rect key="frame" x="0.0" y="126" width="153" height="10"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="10"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="oQf-0v-grZ" firstAttribute="centerX" secondItem="9Gp-mG-c6p" secondAttribute="centerX" id="p18-Ff-FdQ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="bYG-pB-w4u">
+                                        <rect key="frame" x="163" y="0.0" width="153" height="136"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGZ-66-gqW">
+                                                <rect key="frame" x="0.0" y="0.0" width="153" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="153" id="Eab-lv-jtu"/>
+                                                    <constraint firstAttribute="height" constant="120" id="vyI-Ec-xqz"/>
+                                                </constraints>
+                                                <state key="normal" image="CreateAccountButton"/>
+                                                <connections>
+                                                    <segue destination="Z9T-hA-wAN" kind="show" id="Z2U-0z-WIa"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxF-A1-FOr">
+                                                <rect key="frame" x="0.0" y="126" width="153" height="10"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="10"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="GxF-A1-FOr" firstAttribute="centerX" secondItem="bYG-pB-w4u" secondAttribute="centerX" id="K3c-U1-u5a"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Ready for Completely New Experience and Dive into Augmented Reality World" textAlignment="center" lineBreakMode="clip" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pI7-CE-c9e">
+                                <rect key="frame" x="42" y="260" width="291" height="51"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pI7-CE-c9e" firstAttribute="top" secondItem="R5l-yL-18R" secondAttribute="bottom" constant="50" id="0S8-46-joA"/>
+                            <constraint firstItem="R5l-yL-18R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1BG-PF-i3w"/>
+                            <constraint firstItem="R5l-yL-18R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Bh4-vx-NrP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tX1-0m-xzG" secondAttribute="bottom" constant="90" id="nLf-CQ-yr9"/>
+                            <constraint firstItem="pI7-CE-c9e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="o7e-vv-FkO"/>
+                            <constraint firstItem="tX1-0m-xzG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tNn-aZ-k3r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pI7-CE-c9e" secondAttribute="trailing" constant="42" id="w2R-wV-l4q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ROh-VI-MTf">
+            <objects>
+                <viewController id="yLo-cY-sd3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qda-PN-vAM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="CQq-LK-W4W"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aai-Qd-Zxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="-315"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eJ1-aw-8kn">
+            <objects>
+                <viewController id="Z9T-hA-wAN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jJZ-5c-6eO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="pSX-vx-va5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oeV-Iy-vVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="422"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ButtonLogIn" width="153" height="120"/>
+        <image name="CreateAccountButton" width="153" height="120"/>
+        <image name="SmallLogo" width="120" height="168"/>
+    </resources>
 </document>
