@@ -11,6 +11,7 @@
 		2E3372EA20FE2EB700AD31A1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3372E920FE2EB600AD31A1 /* LoginViewController.swift */; };
 		2E3372EC20FE2F2E00AD31A1 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3372EB20FE2F2E00AD31A1 /* CreateAccountViewController.swift */; };
 		2E3372EE20FE321700AD31A1 /* LoginCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3372ED20FE321700AD31A1 /* LoginCreateViewModel.swift */; };
+		2E6FEC53212B01B000BFE7BB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FEC52212B01B000BFE7BB /* MainViewController.swift */; };
 		2E75975620EA2456001A46B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E75975520EA2456001A46B0 /* AppDelegate.swift */; };
 		2E75975820EA2456001A46B0 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E75975720EA2456001A46B0 /* InitialViewController.swift */; };
 		2E75975B20EA2456001A46B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E75975920EA2456001A46B0 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		2E3372E920FE2EB600AD31A1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2E3372EB20FE2F2E00AD31A1 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		2E3372ED20FE321700AD31A1 /* LoginCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCreateViewModel.swift; sourceTree = "<group>"; };
+		2E6FEC52212B01B000BFE7BB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2E75975220EA2456001A46B0 /* FurnitureFuture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureFuture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E75975520EA2456001A46B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E75975720EA2456001A46B0 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				2E1B46E520FCBA8A008ED134 /* LoginProcess */,
 				2E75975520EA2456001A46B0 /* AppDelegate.swift */,
+				2E6FEC52212B01B000BFE7BB /* MainViewController.swift */,
 				2E75975920EA2456001A46B0 /* Main.storyboard */,
 				2E75975C20EA2457001A46B0 /* Assets.xcassets */,
 				2E75975E20EA2457001A46B0 /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 				2E3372EC20FE2F2E00AD31A1 /* CreateAccountViewController.swift in Sources */,
 				2E3372EA20FE2EB700AD31A1 /* LoginViewController.swift in Sources */,
 				2E75975820EA2456001A46B0 /* InitialViewController.swift in Sources */,
+				2E6FEC53212B01B000BFE7BB /* MainViewController.swift in Sources */,
 				2E3372EE20FE321700AD31A1 /* LoginCreateViewModel.swift in Sources */,
 				2E75975620EA2456001A46B0 /* AppDelegate.swift in Sources */,
 			);
@@ -408,7 +412,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J4563W7S2E;
 				INFOPLIST_FILE = FurnitureFuture/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bestontop.FurnitureFuture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -426,7 +433,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J4563W7S2E;
 				INFOPLIST_FILE = FurnitureFuture/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bestontop.FurnitureFuture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

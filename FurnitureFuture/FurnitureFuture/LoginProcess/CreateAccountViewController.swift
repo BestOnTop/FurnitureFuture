@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import SCLAlertView
 
-class CreateAccountViewController: UIViewController {
+class CreateAccountViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
     
     // ViewModel Class
     let loginCreateViewModel = LoginCreateViewModel()
@@ -18,10 +20,20 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var repeatPasswordTextField: UITextField!
+    @IBOutlet weak var facebookButton: FBSDKLoginButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mailTextField.delegate = self
+        passwordTextField.delegate = self
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dissmisKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+        
+        facebookButton.readPermissions = ["public_profile", "email"]
+        facebookButton.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -38,6 +50,16 @@ class CreateAccountViewController: UIViewController {
     }
     
     
-    @IBAction func createByFacebookTapped(_ sender: Any) {
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if error != nil {
+            SCLAlertView().showError("ERROR!", subTitle: error.localizedDescription)
+        } else if result.isCancelled {
+        } else {
+            SCLAlertView().showSuccess("Success!", subTitle: "You Are Successfully Loged in!")
+        }
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        
     }
 }

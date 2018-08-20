@@ -171,28 +171,22 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="9DN-Tk-CNg">
-                                <rect key="frame" x="59" y="477" width="257.5" height="91"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="9DN-Tk-CNg">
+                                <rect key="frame" x="99.5" y="385" width="177" height="183"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOa-De-Et8">
-                                        <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
-                                        <state key="normal" image="LogIn"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="177" id="wQd-mI-8hd"/>
+                                        </constraints>
+                                        <state key="normal" image="Login"/>
                                         <connections>
                                             <action selector="loginTapped:" destination="yLo-cY-sd3" eventType="touchUpInside" id="8nq-wb-fdZ"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glB-Y0-Lpi">
-                                        <rect key="frame" x="117" y="35.5" width="23.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETh-ss-C1j">
-                                        <rect key="frame" x="166.5" y="0.0" width="91" height="91"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETh-ss-C1j" customClass="FBSDKLoginButton">
+                                        <rect key="frame" x="43" y="92" width="91" height="91"/>
                                         <state key="normal" image="Facebook"/>
-                                        <connections>
-                                            <action selector="lgoinByFacebookTapped:" destination="yLo-cY-sd3" eventType="touchUpInside" id="m1W-0p-jYZ"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -239,18 +233,19 @@
                         <viewLayoutGuide key="safeArea" id="CQq-LK-W4W"/>
                     </view>
                     <connections>
+                        <outlet property="facebookButton" destination="ETh-ss-C1j" id="kLI-7o-k74"/>
                         <outlet property="mailTextField" destination="wGS-PG-ChZ" id="aDc-fW-FFm"/>
-                        <outlet property="passwordTextField" destination="McF-MT-zbq" id="ga2-v7-qDZ"/>
+                        <outlet property="passwordTextField" destination="bex-2q-HWK" id="pag-9B-P5s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aai-Qd-Zxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="557.60000000000002" y="-315.29235382308849"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tIj-OI-z69">
             <objects>
-                <viewController id="Hqn-Tj-29x" sceneMemberID="viewController">
+                <viewController id="Hqn-Tj-29x" customClass="MainViewController" customModule="mainVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vqb-fa-ybQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -277,28 +272,19 @@
                                     <constraint firstAttribute="height" constant="42" id="WTM-L4-rKc"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="6nR-0J-hjn">
-                                <rect key="frame" x="59" y="506" width="257.5" height="91"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="6nR-0J-hjn">
+                                <rect key="frame" x="99.5" y="414" width="177" height="183"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdI-Sg-1FR">
-                                        <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="66"/>
                                         <state key="normal" image="Add"/>
                                         <connections>
                                             <action selector="createAccountTapped:" destination="Z9T-hA-wAN" eventType="touchUpInside" id="lJQ-5j-7hw"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2P-mr-2Ya">
-                                        <rect key="frame" x="117" y="35.5" width="23.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqX-O0-MBq">
-                                        <rect key="frame" x="166.5" y="0.0" width="91" height="91"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqX-O0-MBq" customClass="FBSDKLoginButton">
+                                        <rect key="frame" x="43" y="92" width="91" height="91"/>
                                         <state key="normal" image="Facebook"/>
-                                        <connections>
-                                            <action selector="createByFacebookTapped:" destination="Z9T-hA-wAN" eventType="touchUpInside" id="kCS-b7-baS"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -405,6 +391,7 @@
                         <viewLayoutGuide key="safeArea" id="pSX-vx-va5"/>
                     </view>
                     <connections>
+                        <outlet property="facebookButton" destination="dqX-O0-MBq" id="FFP-Op-98R"/>
                         <outlet property="mailTextField" destination="GPZ-Zj-h59" id="2r7-Ea-gu7"/>
                         <outlet property="passwordTextField" destination="YId-L1-2Ev" id="74i-cL-jMb"/>
                         <outlet property="repeatPasswordTextField" destination="hGL-By-XiQ" id="C3e-8k-veB"/>
@@ -416,13 +403,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Add" width="91" height="91"/>
+        <image name="Add" width="177" height="66"/>
         <image name="Back" width="16" height="26"/>
         <image name="ButtonLogIn" width="153" height="120"/>
         <image name="CreateAccountButton" width="153" height="120"/>
         <image name="Facebook" width="91" height="91"/>
         <image name="Group" width="208" height="43"/>
-        <image name="LogIn" width="91" height="91"/>
+        <image name="Login" width="177" height="66"/>
         <image name="SmallLogo" width="120" height="168"/>
     </resources>
 </document>
