@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 import SCLAlertView
+import FirebaseAuth
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDelegate {
     // ViewModel Class
@@ -22,6 +23,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var facebookButton: FBSDKLoginButton!
+    
+    // Variables
     
 
     override func viewDidLoad() {
@@ -47,6 +50,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
     // Login Buttons
     
     @IBAction func loginTapped(_ sender: Any) {
+        loginCreateViewModel.logInByFirebase(mail: mailTextField.text!, password: passwordTextField.text!, vc: self)
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
@@ -54,12 +58,19 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
             SCLAlertView().showError("ERROR!", subTitle: error.localizedDescription)
         } else if result.isCancelled {
         } else {
-            SCLAlertView().showSuccess("Success!", subTitle: "You Are Successfully Loged in!")
+            let credentials = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+            Auth.auth().signInAndRetrieveData(with: credentials) { (authResult, error) in
+                if let error = error {
+                    SCLAlertView().showError("ERROR!", subTitle: error.localizedDescription)
+                } else {
+                    self.performSegue(withIdentifier: "SignUp", sender: nil)
+                }
+            }
         }
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        
+        loginCreateViewModel.logInByFirebase(mail: mailTextField.text!, password: passwordTextField.text!, vc: self)
     }
     
     

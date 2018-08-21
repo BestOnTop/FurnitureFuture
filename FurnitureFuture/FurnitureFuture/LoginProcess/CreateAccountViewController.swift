@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 import SCLAlertView
+import FirebaseAuth
 
 class CreateAccountViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
     
@@ -23,11 +24,16 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate, FBSDKL
     @IBOutlet weak var facebookButton: FBSDKLoginButton!
     
     
+    // Variables
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mailTextField.delegate = self
         passwordTextField.delegate = self
+        repeatPasswordTextField.delegate = self
+        
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dissmisKeyboard))
         view.addGestureRecognizer(tapGesture)
         
@@ -47,6 +53,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate, FBSDKL
     
     // Buttons for creating an account
     @IBAction func createAccountTapped(_ sender: Any) {
+        loginCreateViewModel.createByFirebase(mail: mailTextField.text!, password: passwordTextField.text!, repassword: repeatPasswordTextField.text!, vc: self)
     }
     
     
@@ -55,11 +62,34 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate, FBSDKL
             SCLAlertView().showError("ERROR!", subTitle: error.localizedDescription)
         } else if result.isCancelled {
         } else {
-            SCLAlertView().showSuccess("Success!", subTitle: "You Are Successfully Loged in!")
+            let credentials = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+            Auth.auth().signInAndRetrieveData(with: credentials) { (authResult, error) in
+                if let error = error {
+                    SCLAlertView().showError("ERROR!", subTitle: error.localizedDescription)
+                } else {
+                     self.performSegue(withIdentifier: "SignUp", sender: nil)
+                }
+            }
+           
         }
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         
+    }
+    
+    // hide Keyboard
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        mailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        repeatPasswordTextField.resignFirstResponder()
+        return true
+    }
+    
+    @objc func dissmisKeyboard() {
+        mailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        repeatPasswordTextField.resignFirstResponder()
     }
 }

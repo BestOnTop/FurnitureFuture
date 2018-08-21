@@ -12,11 +12,15 @@
 		2E3372EC20FE2F2E00AD31A1 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3372EB20FE2F2E00AD31A1 /* CreateAccountViewController.swift */; };
 		2E3372EE20FE321700AD31A1 /* LoginCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3372ED20FE321700AD31A1 /* LoginCreateViewModel.swift */; };
 		2E6FEC53212B01B000BFE7BB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FEC52212B01B000BFE7BB /* MainViewController.swift */; };
+		2E6FEC55212B2A9F00BFE7BB /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E6FEC54212B2A9F00BFE7BB /* Models.scnassets */; };
 		2E75975620EA2456001A46B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E75975520EA2456001A46B0 /* AppDelegate.swift */; };
 		2E75975820EA2456001A46B0 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E75975720EA2456001A46B0 /* InitialViewController.swift */; };
 		2E75975B20EA2456001A46B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E75975920EA2456001A46B0 /* Main.storyboard */; };
 		2E75975D20EA2457001A46B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E75975C20EA2457001A46B0 /* Assets.xcassets */; };
 		2E75976020EA2457001A46B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E75975E20EA2457001A46B0 /* LaunchScreen.storyboard */; };
+		2EBB93F4212C1EDC007ED763 /* MenuImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB93F3212C1EDC007ED763 /* MenuImageView.swift */; };
+		2EBB93F7212C4204007ED763 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB93F6212C4204007ED763 /* ItemsViewController.swift */; };
+		2EBB93F9212C421E007ED763 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB93F8212C421E007ED763 /* PlanViewController.swift */; };
 		CFF7383C0D4397403736CF80 /* Pods_FurnitureFuture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401E407866C4BBD68A9EE307 /* Pods_FurnitureFuture.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +30,7 @@
 		2E3372EB20FE2F2E00AD31A1 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		2E3372ED20FE321700AD31A1 /* LoginCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCreateViewModel.swift; sourceTree = "<group>"; };
 		2E6FEC52212B01B000BFE7BB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2E6FEC54212B2A9F00BFE7BB /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
 		2E75975220EA2456001A46B0 /* FurnitureFuture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureFuture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E75975520EA2456001A46B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E75975720EA2456001A46B0 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +38,9 @@
 		2E75975C20EA2457001A46B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E75975F20EA2457001A46B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E75976120EA2457001A46B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EBB93F3212C1EDC007ED763 /* MenuImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuImageView.swift; sourceTree = "<group>"; };
+		2EBB93F6212C4204007ED763 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		2EBB93F8212C421E007ED763 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
 		401E407866C4BBD68A9EE307 /* Pods_FurnitureFuture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureFuture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E4D102B0B200446821B120 /* Pods-FurnitureFuture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureFuture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FurnitureFuture/Pods-FurnitureFuture.debug.xcconfig"; sourceTree = "<group>"; };
 		BBF68FB58667B601555B4BF4 /* Pods-FurnitureFuture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureFuture.release.xcconfig"; path = "Pods/Target Support Files/Pods-FurnitureFuture/Pods-FurnitureFuture.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,16 +90,36 @@
 		2E75975420EA2456001A46B0 /* FurnitureFuture */ = {
 			isa = PBXGroup;
 			children = (
+				2EBB93F5212C41DA007ED763 /* Menu */,
+				2EBB93EE212C1DFF007ED763 /* Extends */,
 				2E1B46E520FCBA8A008ED134 /* LoginProcess */,
 				2E75975520EA2456001A46B0 /* AppDelegate.swift */,
 				2E6FEC52212B01B000BFE7BB /* MainViewController.swift */,
 				2E75975920EA2456001A46B0 /* Main.storyboard */,
 				2E75975C20EA2457001A46B0 /* Assets.xcassets */,
+				2E6FEC54212B2A9F00BFE7BB /* Models.scnassets */,
 				2E75975E20EA2457001A46B0 /* LaunchScreen.storyboard */,
 				2E75976120EA2457001A46B0 /* Info.plist */,
 				2E016D93212AE30F00F80622 /* GoogleService-Info.plist */,
 			);
 			path = FurnitureFuture;
+			sourceTree = "<group>";
+		};
+		2EBB93EE212C1DFF007ED763 /* Extends */ = {
+			isa = PBXGroup;
+			children = (
+				2EBB93F3212C1EDC007ED763 /* MenuImageView.swift */,
+			);
+			path = Extends;
+			sourceTree = "<group>";
+		};
+		2EBB93F5212C41DA007ED763 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				2EBB93F6212C4204007ED763 /* ItemsViewController.swift */,
+				2EBB93F8212C421E007ED763 /* PlanViewController.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		30908A7B18F2C5E2EA47B188 /* Frameworks */ = {
@@ -175,6 +203,7 @@
 				2E75976020EA2457001A46B0 /* LaunchScreen.storyboard in Resources */,
 				2E016D94212AE30F00F80622 /* GoogleService-Info.plist in Resources */,
 				2E75975D20EA2457001A46B0 /* Assets.xcassets in Resources */,
+				2E6FEC55212B2A9F00BFE7BB /* Models.scnassets in Resources */,
 				2E75975B20EA2456001A46B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,10 +289,13 @@
 			files = (
 				2E3372EC20FE2F2E00AD31A1 /* CreateAccountViewController.swift in Sources */,
 				2E3372EA20FE2EB700AD31A1 /* LoginViewController.swift in Sources */,
+				2EBB93F4212C1EDC007ED763 /* MenuImageView.swift in Sources */,
 				2E75975820EA2456001A46B0 /* InitialViewController.swift in Sources */,
 				2E6FEC53212B01B000BFE7BB /* MainViewController.swift in Sources */,
+				2EBB93F7212C4204007ED763 /* ItemsViewController.swift in Sources */,
 				2E3372EE20FE321700AD31A1 /* LoginCreateViewModel.swift in Sources */,
 				2E75975620EA2456001A46B0 /* AppDelegate.swift in Sources */,
+				2EBB93F9212C421E007ED763 /* PlanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
